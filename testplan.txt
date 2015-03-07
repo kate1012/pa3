@@ -1,0 +1,27 @@
+Test cases pa3
+Kaitlyn Sussman and Steve Soltys 
+
+./indexer "file.txt" "testfile.txt"
+Found entry 'hello': {[testfile, 1]}
+Found entry 'is': {[testfile, 1]}
+Found entry 'kaitlyn': {[testfile, 1]}
+Found entry 'my': {[testfile, 1]}
+Found entry 'name': {[testfile, 1]}
+
+
+
+./indexer "file.txt" "test"
+Found entry 'bob': {[test/somefile2, 1]}
+Found entry 'hello': {[test/file.txt, 1], [test/somefile, 1]}
+Found entry 'is': {[test/file.txt, 1], [test/somefile, 1]}
+Found entry 'kaitlyn': {[test/file.txt, 1]}
+Found entry 'my': {[test/file.txt, 1], [test/somefile, 1]}
+Found entry 'name': {[test/file.txt, 1], [test/somefile, 1]}
+Found entry 'steve': {[test/somefile, 2], [test/somefile2, 1]}
+Found entry 'world': {[test/somefile, 1]}
+
+
+
+./indexer "file.txt" "test2.txt"
+Found entry 'hello': {[test2.txt, 4]}
+Found entry 'world': {[test2.txt, 1]}
